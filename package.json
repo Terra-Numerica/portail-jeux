@@ -1,0 +1,12 @@
+{
+    "name": "portail-jeux",
+    "description": "",
+    "version": "1.0.0",
+    "author": "Megitsune",
+    "main": "src/server.js",
+    "license": "ISC",
+    "type": "module",
+    "scripts": {
+        "start": "node ."
+    }
+}
