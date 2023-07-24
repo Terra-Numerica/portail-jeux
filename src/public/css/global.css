@@ -34,6 +34,29 @@ body {
 }
 
 /* =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+# Header
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= */
+
+header {
+    background-color: var(--darkBlue);
+    display: flex;
+    height: 5rem;
+    width: 100%;
+}
+
+.logo {
+    max-width: 100%;
+    padding: 0.5rem;
+}
+
+.title {
+    font-weight: bold;
+    font-size: 30px;
+    color: white;
+    margin: auto;
+}
+
+/* =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 # Scrollbar
 =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= */
 

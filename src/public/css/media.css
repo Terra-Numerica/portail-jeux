@@ -1,0 +1,5 @@
+@media (max-width: 580px) {
+    .logo {
+        content: url("/images/logo_terra_numerica.png")
+    }
+}
