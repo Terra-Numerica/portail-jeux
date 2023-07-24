@@ -1,0 +1,76 @@
+<html lang="fr">
+
+<%- include('./partials/head', { title: 'Liste des jeux' }) %>
+
+<body>
+
+    <%- include('./partials/header') %>
+
+    <div class="filter-bar">
+
+        <div class="checkboxes">
+            <div class="checkbox">
+                <input type="checkbox" id="cycle1" class="toggle-checkbox">
+                <label for="cycle1" class="toggle-label">Cycle 1 (Maternelle)</label>
+                <label for="cycle1" class="toggle-slider"></label>
+            </div>
+        
+            <div class="checkbox">
+                <input type="checkbox" id="cycle2" class="toggle-checkbox">
+                <label for="cycle2" class="toggle-label">Cycle 2 (CP - CE2)</label>
+                <label for="cycle2" class="toggle-slider"></label>
+            </div>
+        
+            <div class="checkbox">
+                <input type="checkbox" id="cycle3" class="toggle-checkbox">
+                <label for="cycle3" class="toggle-label">Cycle 3 (CM1 - 6e)</label>
+                <label for="cycle3" class="toggle-slider"></label>
+            </div>
+        
+            <div class="checkbox">
+                <input type="checkbox" id="cycle4" class="toggle-checkbox">
+                <label for="cycle4" class="toggle-label">Cycle 4 (5e - 3e)</label>
+                <label for="cycle4" class="toggle-slider"></label>
+            </div>
+        
+            <div class="checkbox">
+                <input type="checkbox" id="cycle5" class="toggle-checkbox">
+                <label for="cycle5" class="toggle-label">Lycée</label>
+                <label for="cycle5" class="toggle-slider"></label>
+            </div>
+        
+            <div class="checkbox">
+                <input type="checkbox" id="cycle6" class="toggle-checkbox">
+                <label for="cycle6" class="toggle-label">Supérieur</label>
+                <label for="cycle6" class="toggle-slider"></label>
+            </div>
+        </div>
+    
+        <div class="search-bar">
+            <input type="text" id="search-bar" class="search-input" placeholder="Rechercher...">
+            <button class="search-button"><i class="fa fa-search"></i></button>
+        </div>
+    </div>
+
+    <div class="cards">
+        <% jeux.forEach((jeu) => { %>
+            <div class="card">
+                <div class="card-top">
+                    <img class="card-image" src="<%= jeu.illustration %>" alt="<%= jeu.name %>">
+                    <h3 class="card-title"><%= jeu.name %></h3>
+                    <p class="card-description"><%= jeu.description %></p>
+                </div>
+                <% if(jeu.open_in_new_tab) { %>
+                    <a href="<%= jeu.online_app_url %>" class="card-button" target="_blank">Jouer</a>
+                <% }else{ %>
+                    <a href="/play/<%= jeu.id %>" class="card-button">Jouer</a>
+                <%}%>
+            </div>
+        <%})%>
+    </div>
+
+    <div id="loading-message" style="display: none;">Chargement en cours.. <img src="/images/loading.gif" alt="Loading gif" id="loading-image"></div>
+    <div id="error-message" style="display: none;">Aucun résultat !</div>
+
+</body>
+</html>
