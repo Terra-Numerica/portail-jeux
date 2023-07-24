@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200;300;400;500;600;700;800;900&display=swap');
+
+@import "views/home.css";
+@import "views/play.css";
+
+@import "media.css";
+
+:root {
+    --blueHover: #117DBD;
+    --lightBlue: #95D1F5;
+    --darkBlue: #1A182D;
+    --darkCyan: #40E0D0;
+    --darkRed: #B22222;
+    --yellow: #F9BB12;
+    --astro: #2A233E;
+    --green: #00A19A;
+    --grey: #EBEBEC;
+    --cyan: #00FFFF;
+    --blue: #24A1EB;
+    --red: #DC143C;
+}
+
+* {
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+    list-style: none;
+    padding:0;
+    margin:0;
+}
+
+body {
+    background-color: whitesmoke;
+    background-attachment: fixed;
+}
+
+/* =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+# Scrollbar
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= */
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--blueHover);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--darkBlue);
+}
