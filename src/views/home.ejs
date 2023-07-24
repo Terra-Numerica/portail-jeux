@@ -51,6 +51,23 @@
             <button class="search-button"><i class="fa fa-search"></i></button>
         </div>
     </div>
-    
+
+    <div class="cards">
+        <% jeux.forEach((jeu) => { %>
+            <div class="card">
+                <div class="card-top">
+                    <img class="card-image" src="<%= jeu.illustration %>" alt="<%= jeu.name %>">
+                    <h3 class="card-title"><%= jeu.name %></h3>
+                    <p class="card-description"><%= jeu.description %></p>
+                </div>
+                <% if(jeu.open_in_new_tab) { %>
+                    <a href="<%= jeu.online_app_url %>" class="card-button" target="_blank">Jouer</a>
+                <% }else{ %>
+                    <a href="/play/<%= jeu.id %>" class="card-button">Jouer</a>
+                <%}%>
+            </div>
+        <%})%>
+    </div>
+
 </body>
 </html>
