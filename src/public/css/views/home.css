@@ -176,3 +176,37 @@
     background-color: var(--darkBlue);
     color: white;
 }
+
+/* =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+# Loading & error message
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= */
+
+#error-message, #loading-message {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20rem;
+    font-size: 24px;
+    font-weight: bold;
+    margin: 30vh auto;
+    height: 75px;
+    padding: 24px;
+    border-radius: 10px;
+    background: white;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    transition: box-shadow 0.3s ease-in-out;
+    border: 2px solid white;
+}
+
+#error-message:hover, #loading-message:hover {
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.4);
+}
+
+#loading-message {
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+#loading-image {
+    width: 10%;
+}
