@@ -18,5 +18,8 @@ export async function getGames(params = "") {
 };
 
 export async function getGame(jeuId) {
-    return (await getJeux()).find((jeu) => jeu.id === jeuId);
+    
+    const jeux = await getGames();
+
+    return jeux.find((jeu) => jeu.id === jeuId);
 };
