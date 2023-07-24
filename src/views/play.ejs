@@ -1,0 +1,20 @@
+<html lang="fr">
+
+<%- include('./partials/head', { title: 'Liste des jeux' }) %>
+
+<body>
+
+    <%- include('./partials/header') %>
+
+    <% 
+        let gamelink = jeu.online_app_url; 
+    
+        if(jeu.online_app_url.includes('scratch') && jeu.online_app_url.includes('/fullscreen')) {
+            gamelink=jeu.online_app_url.replace("/fullscreen", "/embed" ); 
+        }; 
+    %>
+
+    <iframe allowtransparency="true" src="<%= gamelink %>" frameborder="0" allowfullscreen></iframe>
+</body>
+
+</html>
